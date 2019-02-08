@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="ko-kr">
+        <title>Hello World</title>
+        <script>
+            const socket = new WebSocket("ws://localhost:5000");
+            socket.addEventListener("open", () => {
+                socket.send("Newbie's commin'");
+            });
+            socket.addEventListener("message", event => {
+                console.log(`Message from server: ${event.data}`);
+                const oTexts = document.getElementById("messages").innerHTML;
+                document.getElementById("messages").innerHTML = `${oTexts}<p>${event.data}</p>`;
+            });
+            function sendMsg() {
+                const textMsg = document.getElementById("message_field").value;
+                socket.send(textMsg);
+            }
+        </script>
+    </head>
+    <body>
+        <%=key %>
+        <div class="messages" id="messages"></div>
+        <input type="text" id="message_field">
+        <input type="button" value="보내기" onclick="sendMsg();">
+    </body>
+</html>

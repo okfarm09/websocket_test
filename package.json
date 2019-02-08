@@ -1,0 +1,29 @@
+{
+  "name": "websocket_test",
+  "version": "0.0.1",
+  "description": "Sample websocket test",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okfarm09/websocket_test.git"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "author": "Greg Nam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okfarm09/websocket_test/issues"
+  },
+  "homepage": "https://github.com/okfarm09/websocket_test#readme",
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "simple-node-logger": "^18.12.21",
+    "ws": "^6.1.3"
+  }
+}

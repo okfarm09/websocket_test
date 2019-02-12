@@ -23,6 +23,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "sha3": "^2.0.0",
     "simple-node-logger": "^18.12.21",
     "ws": "^6.1.3"
   }
